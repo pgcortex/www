@@ -615,7 +615,7 @@
       <h2>Want an early look?</h2>
       <p>We're heads-down building the instant demo and cloud rollout. Leave your email and we'll reach out when there's something worth trying.</p>
 
-      <form class="capture-form" id="captureForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form class="capture-form" id="captureForm" onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('captureSuccess').style.display='block';">
         <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
         <button type="submit" class="btn btn-primary">Get in touch</button>
       </form>

@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>pgCortex — Private Enterprise Search, Powered by AI</title>
-<meta name="description" content="On-premise RAG search for enterprises. Your documents never leave your infrastructure — ask questions, get cited answers, keep everything private.">
+<title>pgCortex — Database-Native AI Infrastructure</title>
+<meta name="description" content="Stop moving data to AI. Run state-of-the-art LLMs natively inside your cloud data warehouse. Zero data movement, zero egress fees.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght=500;600;700&family=Inter:wght=400;500;600;700&family=Fira+Code:wght=400;500&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -187,7 +187,7 @@
   }
   .btn-ghost:hover { border-color: var(--accent); background: rgba(79,142,247,0.06); }
 
-  /* ── Boundary diagram — the signature element ── */
+  /* ── Boundary diagram ── */
   .boundary {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -471,36 +471,35 @@
     <div class="nav-links">
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
-      <a href="#contact" class="nav-cta">Get in touch</a>
+      <a href="#contact" class="nav-cta">Request Developer Access</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow"><span class="eyebrow-dot"></span> Your documents never leave your infrastructure</span>
-    <h1>Enterprise search that answers questions <span class="accent">without shipping your data anywhere.</span></h1>
-    <p class="lede">pgCortex is a private, on-premise RAG platform. Point it at your HR policies, contracts, and internal docs — it answers in plain English, with citations, running entirely inside your own network.</p>
+    <span class="eyebrow"><span class="eyebrow-dot"></span> Zero Egress · Cloud-Native Inference</span>
+    <h1>Stop moving data to AI. <br><span class="accent">Move AI to your data warehouse.</span></h1>
+    <p class="lede">Run state-of-the-art LLM inference natively inside your existing cloud data infrastructure using standard SQL. Zero ETL pipelines. Zero data security risks.</p>
     <div class="hero-ctas">
-      <a href="#contact" class="btn btn-primary">Get in touch →</a>
-      <a href="#how" class="btn btn-ghost">See how it works</a>
+      <a href="#contact" class="btn btn-primary">Request Early Access →</a>
+      <a href="#how" class="btn btn-ghost">How It Works</a>
     </div>
 
     <div class="boundary">
-      <div class="boundary-label">// what actually leaves your network</div>
+      <div class="boundary-label">// Data Boundary Visualizer</div>
       <div class="boundary-frame">
-        <div class="boundary-frame-tag">your infrastructure</div>
+        <div class="boundary-frame-tag">your secure cloud boundary (snowflake / bigquery / gcp)</div>
         <div class="boundary-row">
-          <div class="boundary-node"><strong>HR docs</strong>PDF · DOCX</div>
-          <div class="boundary-node"><strong>Contracts</strong>Legal corpus</div>
-          <div class="boundary-node"><strong>Wiki / Confluence</strong>Internal</div>
-          <span class="boundary-arrow">→</span>
-          <div class="boundary-node"><strong>pgCortex</strong>Postgres + pgvector</div>
+          <div class="boundary-node"><strong>Production Data</strong>Billions of Rows</div>
+          <div class="boundary-node"><strong>SQL Layer</strong>Analytical Engine</div>
+          <span class="boundary-arrow">⇄</span>
+          <div class="boundary-node"><strong>pgCortex Engine</strong>In-Warehouse Inference</div>
         </div>
       </div>
       <div class="boundary-io">
-        <span><span class="leaves">↗ leaves your network:</span> the question, the answer</span>
-        <span><span class="stays">⌂ stays inside:</span> every document, every embedding</span>
+        <span><span class="leaves" style="color:#ef4444;">✕ Sent to 3rd-party APIs:</span> Zero Bytes</span>
+        <span><span class="stays">⌂ Stays inside your VPC:</span> Every row, context token, and model weight</span>
       </div>
     </div>
   </div>
@@ -510,39 +509,39 @@
   <div class="wrap">
     <div class="section-head">
       <span class="section-eyebrow">How it works</span>
-      <h2>Search that reads your documents, not the other way around</h2>
-      <p>Connect your sources, ask questions in plain English, get answers grounded in your own content — with the source cited every time.</p>
+      <h2>Inference that reads your databases, not the other way around</h2>
+      <p>Connect your analytical layers, execute LLM operations via traditional data scripts, and scale predictive architectures right over your core assets.</p>
     </div>
     <div class="features">
       <div class="feature">
         <div class="feature-icon">⌂</div>
-        <h3>Runs on your infrastructure</h3>
-        <p>Docker Compose, PostgreSQL + pgvector, local LLM inference via Ollama. No document ever transits a third-party API.</p>
+        <h3>Absolute Privacy</h3>
+        <p>Your enterprise data never leaves your secure cloud boundary. Run calculations and workflows over highly regulated records with zero exposure risk.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">⇄</div>
-        <h3>Connects where your docs already live</h3>
-        <p>Google Drive, SharePoint, and Confluence connectors keep your corpus in sync on a schedule — no manual re-uploads.</p>
+        <h3>No Brittle ETL Pipelines</h3>
+        <p>Eliminate complex data-export scheduling. Run inference queries dynamically right where your analytical data resides.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">✎</div>
-        <h3>Answers with citations</h3>
-        <p>Every answer points back to the source document and section — no hallucinated policy, no unverifiable claims.</p>
+        <h3>Pure SQL-Native Interface</h3>
+        <p>Call powerful language models directly within standard analytical functions. If your developers can write SQL, they can build production AI features.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">◈</div>
-        <h3>Corpus-aware access control</h3>
-        <p>Separate HR, Legal, Banking, and Support corpora with their own permissions — people only see what they're allowed to.</p>
+        <h3>Sub-Second Scalability</h3>
+        <p>Leverage cloud scaling mechanics to process massive batch categorizations, entity extraction, and sentiment profiling across millions of records seamlessly.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">▤</div>
-        <h3>Built on Postgres</h3>
-        <p>Hybrid vector + keyword retrieval on pgvector — one database to operate, back up, and reason about, not a separate vector store.</p>
+        <h3>Built on PostgreSQL Core</h3>
+        <p>Engineered to utilize standard cloud database relational extensions. Zero separate architectural silos to manage, deploy, or secure.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">✓</div>
-        <h3>Deployed your way</h3>
-        <p>Self-hosted on your own infrastructure, or a dedicated instance in our cloud — same product, your choice of boundary.</p>
+        <h3>Cloud-First Deployment</h3>
+        <p>Deploys rapidly into your corporate AWS VPC, Google Cloud environment, or directly as an integrated data-warehouse container utility.</p>
       </div>
     </div>
   </div>
@@ -553,30 +552,30 @@
     <div class="section-head">
       <span class="section-eyebrow">Pricing</span>
       <h2>Straightforward tiers, no seat-count games</h2>
-      <p>Start small, scale as your corpus and team grow. Enterprise scales with usage, not a sales negotiation.</p>
+      <p>Start small, scale as your database footprints and team grow. Enterprise scales with usage, not a sales negotiation.</p>
     </div>
     <div class="pricing-grid">
       <div class="tier">
         <div class="tier-name">Starter</div>
         <div class="tier-price">$99<span>/mo</span></div>
-        <div class="tier-desc">Small team piloting a single department.</div>
+        <div class="tier-desc">Small team piloting an initial database cluster.</div>
         <ul class="tier-features">
-          <li>1 corpus, 3 connectors</li>
-          <li>5 users</li>
-          <li>2,500 documents</li>
-          <li>1,000 queries/mo</li>
+          <li>1 production cluster</li>
+          <li>5 engineer seats</li>
+          <li>Up to 10M rows optimized</li>
+          <li>10,000 queries/mo</li>
         </ul>
         <a href="#contact" class="btn btn-ghost">Get in touch</a>
       </div>
       <div class="tier">
         <div class="tier-name">Growth</div>
         <div class="tier-price">$299<span>/mo</span></div>
-        <div class="tier-desc">Mid-size team, multiple sources.</div>
+        <div class="tier-desc">Mid-size data layers with multi-source tracking.</div>
         <ul class="tier-features">
-          <li>3 corpora, 10 connectors</li>
-          <li>20 users</li>
-          <li>25,000 documents</li>
-          <li>10,000 queries/mo</li>
+          <li>3 production clusters</li>
+          <li>20 engineer seats</li>
+          <li>Up to 100M rows optimized</li>
+          <li>100,000 queries/mo</li>
         </ul>
         <a href="#contact" class="btn btn-ghost">Get in touch</a>
       </div>
@@ -584,23 +583,23 @@
         <div class="tier-badge">MOST COMMON</div>
         <div class="tier-name">Standard</div>
         <div class="tier-price">$999<span>/mo</span></div>
-        <div class="tier-desc">Department-wide deployment.</div>
+        <div class="tier-desc">Enterprise database ecosystem integration.</div>
         <ul class="tier-features">
-          <li>Unlimited corpora & connectors</li>
-          <li>100 users</li>
-          <li>250,000 documents</li>
-          <li>SSO, priority support</li>
+          <li>Unlimited clusters & endpoints</li>
+          <li>100 engineer seats</li>
+          <li>Up to 1B rows optimized</li>
+          <li>SSO, priority data support</li>
         </ul>
         <a href="#contact" class="btn btn-primary">Get in touch</a>
       </div>
       <div class="tier">
         <div class="tier-name">Enterprise</div>
         <div class="tier-price" style="font-size:24px;">Usage-based</div>
-        <div class="tier-desc">Org-wide or regulated environments.</div>
+        <div class="tier-desc">Multi-cloud architectures or highly regulated footprints.</div>
         <ul class="tier-features">
           <li>Unlimited everything</li>
           <li>Dedicated instance & SLA</li>
-          <li>On-prem or air-gapped option</li>
+          <li>VPC isolated configurations</li>
           <li>Dedicated CSM</li>
         </ul>
         <a href="#contact" class="btn btn-ghost">Get in touch</a>
@@ -612,15 +611,15 @@
 <section id="contact">
   <div class="wrap">
     <div class="contact-box">
-      <h2>Want an early look?</h2>
-      <p>We're heads-down building the instant demo and cloud rollout. Leave your email and we'll reach out when there's something worth trying.</p>
+      <h2>Join the Cloud-First AI Private Beta</h2>
+      <p>We are spinning up early test integrations for data platforms. Register your email for alpha developer access and architectural blueprints.</p>
 
       <form class="capture-form" id="captureForm" onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('captureSuccess').style.display='block';">
         <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
-        <button type="submit" class="btn btn-primary">Get in touch</button>
+        <button type="submit" class="btn btn-primary">Get Access</button>
       </form>
       <p class="capture-success" id="captureSuccess">Thanks — we'll be in touch.</p>
-      <p class="capture-note">No spam. We'll only email you about pgCortex access.</p>
+      <p class="capture-note">No spam. We'll only email you about pgCortex cloud access.</p>
     </div>
   </div>
 </section>
@@ -630,7 +629,7 @@
     <div class="footer-logo">
       <span class="pg" style="color:var(--accent);">pg</span>Cortex
     </div>
-    <div class="tagline">Private Enterprise Search, Powered by AI</div>
+    <div class="tagline">Database-Native AI Infrastructure</div>
   </div>
 </footer>
 

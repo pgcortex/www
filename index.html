@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>pgCortex — Private Enterprise Search & RAG</title>
-<meta name="description" content="Secure enterprise search for your cloud infrastructure. Your documents never leave your cloud perimeter — ask questions, get cited answers, keep everything private.">
+<title>pgCortex — Private Enterprise Search, Powered by AI</title>
+<meta name="description" content="On-premise RAG search for enterprises. Your documents never leave your infrastructure — ask questions, get cited answers, keep everything private.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght=500;600;700&family=Inter:wght=400;500;600;700&family=Fira+Code:wght=400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -187,7 +187,7 @@
   }
   .btn-ghost:hover { border-color: var(--accent); background: rgba(79,142,247,0.06); }
 
-  /* ── Boundary diagram ── */
+  /* ── Boundary diagram — the signature element ── */
   .boundary {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -315,7 +315,7 @@
   /* ── Pricing ── */
   .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
   .tier {
@@ -439,7 +439,8 @@
 
   @media (max-width: 860px) {
     .features { grid-template-columns: 1fr; }
-    .pricing-grid { grid-template-columns: 1fr 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; gap: 20px; }
+    .features { grid-template-columns: 1fr; }
     .nav-links { display: none; }
   }
   @media (max-width: 560px) {
@@ -471,37 +472,36 @@
     <div class="nav-links">
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
-      <a href="#contact" class="nav-cta">Request Alpha Access</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow"><span class="eyebrow-dot"></span> Secure Cloud Perimeter · Zero-Egress Search</span>
-    <h1>Enterprise search that answers questions <span class="accent">without your documents leaving your cloud.</span></h1>
-    <p class="lede">pgCortex is a private, cloud-first RAG platform. Point it at your internal docs, wiki nodes, and databases — it answers in plain English with citations, deploying natively inside your own secure cloud boundary.</p>
+    <span class="eyebrow"><span class="eyebrow-dot"></span> Your documents never leave your infrastructure</span>
+    <h1>Enterprise search that answers questions <span class="accent">without shipping your data anywhere.</span></h1>
+    <p class="lede">pgCortex is a private, on-premise RAG platform. Point it at your HR policies, contracts, and internal docs — it answers in plain English, with citations, running entirely inside your own network.</p>
     <div class="hero-ctas">
-      <a href="#contact" class="btn btn-primary">Request Early Access →</a>
+      <a href="#contact" class="btn btn-primary">Get in touch →</a>
       <a href="#how" class="btn btn-ghost">See how it works</a>
     </div>
 
     <div class="boundary">
-      <div class="boundary-label">// Data Boundary Visualizer</div>
+      <div class="boundary-label">// what actually leaves your network</div>
       <div class="boundary-frame">
-        <div class="boundary-frame-tag">your secure cloud boundary (aws / gcp / vpc)</div>
+        <div class="boundary-frame-tag">your infrastructure</div>
         <div class="boundary-row">
-          <div class="boundary-node"><strong>Internal Files</strong>PDF · DOCX</div>
-          <div class="boundary-node"><strong>Wikis / KB</strong>Confluence · Drive</div>
+          <div class="boundary-node"><strong>HR docs</strong>PDF · DOCX</div>
+          <div class="boundary-node"><strong>Contracts</strong>Legal corpus</div>
+          <div class="boundary-node"><strong>Wiki / Confluence</strong>Internal</div>
           <span class="boundary-arrow">→</span>
-          <div class="boundary-node"><strong>pgCortex Engine</strong>In-VPC Index & RAG</div>
-          <span class="boundary-arrow">→</span>
-          <div class="boundary-node"><strong>Your Postgres</strong>Managed pgvector</div>
+          <div class="boundary-node"><strong>pgCortex</strong>Postgres + pgvector</div>
         </div>
       </div>
       <div class="boundary-io">
-        <span><span class="leaves" style="color:#ef4444;">✕ Sent to 3rd-party APIs:</span> Zero Bytes</span>
-        <span><span class="stays">⌂ Stays inside your VPC:</span> Every document, structural embedding, and search index</span>
+        <span><span class="leaves">↗ leaves your network:</span> the question, the answer</span>
+        <span><span class="stays">⌂ stays inside:</span> every document, every embedding</span>
       </div>
     </div>
   </div>
@@ -512,38 +512,38 @@
     <div class="section-head">
       <span class="section-eyebrow">How it works</span>
       <h2>Search that reads your documents, not the other way around</h2>
-      <p>Connect your internal cloud tools, ask operational questions in plain language, and pull answers grounded entirely in your corporate corpus—with strict source citations.</p>
+      <p>Connect your sources, ask questions in plain English, get answers grounded in your own content — with the source cited every time.</p>
     </div>
     <div class="features">
       <div class="feature">
         <div class="feature-icon">⌂</div>
-        <h3>Absolute Privacy</h3>
-        <p>Your enterprise data never leaves your network perimeter. Run highly secure semantic matching and parsing without data-broker or third-party exposure.</p>
+        <h3>Runs on your infrastructure</h3>
+        <p>Docker Compose, PostgreSQL + pgvector, local LLM inference via Ollama. No document ever transits a third-party API.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">⇄</div>
-        <h3>Continuous Cloud Sync</h3>
-        <p>Native secure ingestion points keep Google Drive, SharePoint, and Confluence ecosystems fully tracked and updating on automated intervals.</p>
+        <h3>Connects where your docs already live</h3>
+        <p>Google Drive, SharePoint, and Confluence connectors keep your corpus in sync on a schedule — no manual re-uploads.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">✎</div>
-        <h3>Answers with Citations</h3>
-        <p>Every response traces back cleanly to the source material file and subsection paragraph. No hallucinated protocols, no unverifiable metrics.</p>
+        <h3>Answers with citations</h3>
+        <p>Every answer points back to the source document and section — no hallucinated policy, no unverifiable claims.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">◈</div>
-        <h3>Context-Aware Access</h3>
-        <p>Isolate operational partitions (HR, Legal, Board data) by original permission scopes. Your users only query information they are authorized to see.</p>
+        <h3>Corpus-aware access control</h3>
+        <p>Separate HR, Legal, Banking, and Support corpora with their own permissions — people only see what they're allowed to.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">▤</div>
-        <h3>PostgreSQL Core Architecture</h3>
-        <p>Utilizes advanced relational extensions via standard pgvector layouts. Simple to back up, scale, and maintain alongside your production tables.</p>
+        <h3>Built on Postgres</h3>
+        <p>Hybrid vector + keyword retrieval on pgvector — one database to operate, back up, and reason about, not a separate vector store.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">✓</div>
-        <h3>VPC Native Deployment</h3>
-        <p>Launches smoothly as a secure image architecture right inside your existing corporate AWS or GCP footprint. Your cloud, your boundary rules.</p>
+        <h3>Deployed your way</h3>
+        <p>Self-hosted on your own infrastructure, or a dedicated instance in our cloud — same product, your choice of boundary.</p>
       </div>
     </div>
   </div>
@@ -554,30 +554,18 @@
     <div class="section-head">
       <span class="section-eyebrow">Pricing</span>
       <h2>Straightforward tiers, no seat-count games</h2>
-      <p>Start small, scale as your indexed corpuses and query volume expand. Enterprise scales transparently with usage variables.</p>
+      <p>Start small, scale as your corpus and team grow. Enterprise scales with usage, not a sales negotiation. Save 10% paying annually, or 20% on a 3-year term.</p>
     </div>
     <div class="pricing-grid">
       <div class="tier">
         <div class="tier-name">Starter</div>
         <div class="tier-price">$99<span>/mo</span></div>
-        <div class="tier-desc">Small team piloting a single department footprint.</div>
+        <div class="tier-desc">Small team piloting a single department.</div>
         <ul class="tier-features">
-          <li>1 secure corpus namespace</li>
-          <li>3 active connectors</li>
-          <li>2,500 indexed documents</li>
+          <li>2 of 3 connector types, 1 connection each</li>
+          <li>5 users</li>
+          <li>500 documents</li>
           <li>1,000 queries/mo</li>
-        </ul>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
-      </div>
-      <div class="tier">
-        <div class="tier-name">Growth</div>
-        <div class="tier-price">$299<span>/mo</span></div>
-        <div class="tier-desc">Mid-size division managing multi-source arrays.</div>
-        <ul class="tier-features">
-          <li>3 secure corpus namespaces</li>
-          <li>10 active connectors</li>
-          <li>25,000 indexed documents</li>
-          <li>10,000 queries/mo</li>
         </ul>
         <a href="#contact" class="btn btn-ghost">Get in touch</a>
       </div>
@@ -585,43 +573,47 @@
         <div class="tier-badge">MOST COMMON</div>
         <div class="tier-name">Standard</div>
         <div class="tier-price">$999<span>/mo</span></div>
-        <div class="tier-desc">Full operational department alignment.</div>
+        <div class="tier-desc">Department-wide deployment.</div>
         <ul class="tier-features">
-          <li>Unlimited corpus fields</li>
-          <li>Unlimited source endpoints</li>
-          <li>250,000 indexed documents</li>
-          <li>SSO, priority support layer</li>
+          <li>Unlimited corpora</li>
+          <li>All 3 connector types, unlimited connections</li>
+          <li>100 users</li>
+          <li>25,000 documents</li>
+          <li>10,000 queries/mo · SSO, priority support</li>
         </ul>
         <a href="#contact" class="btn btn-primary">Get in touch</a>
       </div>
       <div class="tier">
         <div class="tier-name">Enterprise</div>
         <div class="tier-price" style="font-size:24px;">Usage-based</div>
-        <div class="tier-desc">Highly regulated or complex multi-region configurations.</div>
+        <div class="tier-desc">Org-wide or regulated environments.</div>
         <ul class="tier-features">
-          <li>Unlimited structural limits</li>
-          <li>Dedicated runtime SLA</li>
-          <li>Isolated VPC deployment parameters</li>
-          <li>Dedicated success technical rep</li>
+          <li>Unlimited everything</li>
+          <li>Dedicated instance & SLA</li>
+          <li>On-prem or air-gapped option</li>
+          <li>Dedicated CSM</li>
         </ul>
         <a href="#contact" class="btn btn-ghost">Get in touch</a>
       </div>
     </div>
+    <p style="text-align:center; margin-top:24px; font-size:13px; color:var(--text-muted);">
+      Prepay discounts: <strong style="color:var(--text-secondary);">10% off</strong> on a 1-year term, <strong style="color:var(--text-secondary);">20% off</strong> on a 3-year term. Applies to Starter and Standard.
+    </p>
   </div>
 </section>
 
 <section id="contact">
   <div class="wrap">
     <div class="contact-box">
-      <h2>Join the Cloud-First Private Beta</h2>
-      <p>We're opening spots for teams looking to run secure, localized enterprise search frameworks. Register below to receive alpha access details.</p>
+      <h2>Want an early look?</h2>
+      <p>We're heads-down building the instant demo and cloud rollout. Leave your email and we'll reach out when there's something worth trying.</p>
 
-      <form class="capture-form" id="captureForm" onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('captureSuccess').style.display='block';">
+      <form class="capture-form" id="captureForm" action="https://formspree.io/f/xqerbjaz" method="POST">
         <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
-        <button type="submit" class="btn btn-primary">Request Access</button>
+        <button type="submit" class="btn btn-primary">Get in touch</button>
       </form>
       <p class="capture-success" id="captureSuccess">Thanks — we'll be in touch.</p>
-      <p class="capture-note">No spam. We'll only contact you regarding pgCortex updates.</p>
+      <p class="capture-note">No spam. We'll only email you about pgCortex access.</p>
     </div>
   </div>
 </section>
